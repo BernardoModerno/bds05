@@ -6,19 +6,13 @@ import org.junit.jupiter.api.Test;
 public class UserTests {
 
 	@Test
-	public void userShouldHaveCorrectStructure() {
-		
-		User entity = new User();
+	public void reviewShouldHaveCorrectStructure() {
+	
+		Role entity = new Role();
 		entity.setId(1L);
-		entity.setName("Name");
-		entity.setEmail("email@gmail.com");
-		entity.setPassword("password");
+		entity.setAuthority("ROLE_MEMBER");
 	
 		Assertions.assertNotNull(entity.getId());
-		Assertions.assertNotNull(entity.getName());
-		Assertions.assertNotNull(entity.getEmail());
-		Assertions.assertNotNull(entity.getPassword());
-		Assertions.assertEquals(0, entity.getRoles().size());
-		Assertions.assertEquals(0, entity.getReviews().size());
+		Assertions.assertNotNull(entity.getAuthority());
 	}
 }
